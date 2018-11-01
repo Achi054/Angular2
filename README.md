@@ -28,23 +28,23 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Instructions
 
-Angularjs need default tools to run angular application
+Angularjs need default tools to run angular application<br/><br/>
 
-- Node version 6 or above
-  Command to check node version
+- Node version 6 or above<br/>
+  Command to check node version<br/>
   `node -v`
-- Nuget Package Manager, npm version 6 or above
-  Command to check npm version
-  `npm -v`
-  Command to install npm
+- Nuget Package Manager, npm version 6 or above<br/>
+  Command to check npm version<br/>
+  `npm -v`<br/>
+  Command to install npm<br/>
   `npm install -g`
-- Angularjs boiler plates are defined in angular cli
-  Command to install angular cli
-  `npm install -g @angular/cli`
-  Command to check angular cli info
-  `ng -v`
-  Command to validate angularjs path
+- Angularjs boiler plates are defined in angular cli<br/>
+  Command to install angular cli<br/>
+  `npm install -g @angular/cli`<br/>
+  Command to check angular cli info<br/>
+  `ng -v`<br/>
+  Command to validate angularjs path<br/>
   `npm list -g @angular/cli --depth=0`
-- Create angular app with basic templates
-  Command to create angularjs application
+- Create angular app with basic templates<br/>
+  Command to create angularjs application<br/>
   `ng new app-name --skip-install`
