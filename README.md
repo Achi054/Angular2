@@ -61,3 +61,18 @@ where angularImagePath is a component property.
 - Statement expression<br/>
 Events are triggered using <br/>
 <b>\<button (click)='delete()' \>x\<button\></b>
+- Binding syntax<br/>
+Binding can be grouped as <b>source to view, view to source and two-way</b>
+<table>
+<tr><td>Source to View</td>
+<td>{{Expression}} or [target]="expression" or bind-target="expression"</td>
+</tr>
+<tr>
+<td>View to Source</td>
+<td>(target)="statement" or on-target="statement"</td>
+</tr>
+<tr>
+<td>Two Way</td>
+<td>[(target)]="expression" or bindon-target="expression"</td>
+</tr>
+</table>
