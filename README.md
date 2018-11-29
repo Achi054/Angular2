@@ -48,3 +48,16 @@ Angularjs need default tools to run angular application<br/><br/>
 - Create angular app with basic templates<br/>
   Command to create angularjs application<br/>
   `ng new app-name --skip-install`
+
+## Component and templates
+- Template can be defined inline or in a file<br/>
+Inline using <b>template</b> within decorator <b>@Component</b><br/>
+File using <b>templateUrl</b><br/>
+- Templates do not render <b>script</b> tags as they may induce scripting attacks. In practice the script tag is ignored as part of template rendering.
+- Expression context<br/>
+Assign component property to HTML attribute using brackets<br/>
+<b>\<img [src]="angularImagePath" alt="DC Comics"\></b><br/>
+where angularImagePath is a component property.
+- Statement expression<br/>
+Events are triggered using <br/>
+<b>\<button (click)='delete()' \>x\<button\></b>
