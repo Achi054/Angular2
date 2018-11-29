@@ -5,8 +5,9 @@
   Heroes:
   <ul>
     <li *ngFor="let hero of heroes">{{hero.name}}
+      <app-hero-details [hero]="hero"></app-hero-details>
       <button (click)="deleteHero(hero)">x</button>
     </li>
   </ul>
 </div>
-<p *ngIf="heroes.length > 3"> There are many heroes !!</p>
+<p *ngIf="heroes.length > 3" [ngClass]="{ 'color-red' : true }"> There are many heroes !!</p>

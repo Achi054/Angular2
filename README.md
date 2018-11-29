@@ -76,3 +76,5 @@ Binding can be grouped as <b>source to view, view to source and two-way</b>
 <td>[(target)]="expression" or bindon-target="expression"</td>
 </tr>
 </table>
+- Passing data to child from parent<br/>
+<b>@Input property-name</b>
