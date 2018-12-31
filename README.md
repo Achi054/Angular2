@@ -51,18 +51,18 @@ Angularjs need default tools to run angular application<br/><br/>
 
 ## Component and templates
 - Template can be defined inline or in a file<br/>
-Inline using <b>template</b> within decorator <b>@Component</b><br/>
-File using <b>templateUrl</b><br/>
-- Templates do not render <b>script</b> tags as they may induce scripting attacks. In practice the script tag is ignored as part of template rendering.
+Inline using `template` within decorator `@Component`<br/>
+File using `templateUrl`<br/>
+- Templates do not render `script` tags as they may induce scripting attacks. In practice the script tag is ignored as part of template rendering.
 - Expression context<br/>
 Assign component property to HTML attribute using brackets<br/>
-<b>\<img [src]="angularImagePath" alt="DC Comics"\></b><br/>
+`\<img [src]="angularImagePath" alt="DC Comics"\>`<br/>
 where angularImagePath is a component property.
 - Statement expression<br/>
 Events are triggered using <br/>
-<b>\<button (click)='delete()' \>x\<button\></b>
+`\<button (click)='delete()' \>x\<button\>`
 - Binding syntax<br/>
-Binding can be grouped as <b>source to view, view to source and two-way</b>
+Binding can be grouped as `source to view, view to source and two-way`
 <table>
 <tr><td>Source to View</td>
 <td>{{Expression}} or [target]="expression" or bind-target="expression"</td>
@@ -78,15 +78,15 @@ Binding can be grouped as <b>source to view, view to source and two-way</b>
 </table>
 
 - Passing data to child from parent<br/>
-<b>@Input property-name</b><br/>
+`@Input property-name`<br/>
 
 - Class attribute<br/>
-<b>\<p [class.col-green]="isGreen"\></b>
+`<p [class.col-green]="isGreen">`
 
 - Emit event from child to parent<br/>
-create event emiter <b>@Output() deleteRequest = new EventEmmiter<Hero>();</b>
+create event emiter `@Output() deleteRequest = new EventEmmiter<Hero>();`
 <br/>
 On delete click, emit hero object <br/>
-<b>delete() { this.deleteRequest.emit(this.hero); }</b><br/>
+`delete() { this.deleteRequest.emit(this.hero); }`<br/>
 In component element of parent handle deleteRequest<br/>
-<b>\<app-hero-component (deleteRequest)="deleteHero($event)" /></b><br/>
+`<app-hero-component (deleteRequest)="deleteHero($event)" />`<br/>
