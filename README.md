@@ -56,11 +56,11 @@ File using `templateUrl`<br/>
 - Templates do not render `script` tags as they may induce scripting attacks. In practice the script tag is ignored as part of template rendering.
 - Expression context<br/>
 Assign component property to HTML attribute using brackets<br/>
-`\<img [src]="angularImagePath" alt="DC Comics"\>`<br/>
+`<img [src]="angularImagePath" alt="DC Comics">`<br/>
 where angularImagePath is a component property.
 - Statement expression<br/>
 Events are triggered using <br/>
-`\<button (click)='delete()' \>x\<button\>`
+`<button (click)='delete()'>x<button>`
 - Binding syntax<br/>
 Binding can be grouped as `source to view, view to source and two-way`
 <table>
