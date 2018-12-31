@@ -1,3 +1,6 @@
-<p>
-  {{details}}
-</p>
+<div>
+  <p [class.col-green]="isGreen">
+    {{displayDetails()}}
+  </p>
+  <button (click)="delete()">x</button>
+</div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Hero } from '../hero';
 
 @Component({
@@ -9,12 +9,19 @@ import { Hero } from '../hero';
 export class HeroDetailsComponent implements OnInit {
   @Input() hero: Hero;
   details = `Because I'm `;
+  isGreen = false;
+  @Output() deleteRequest = new EventEmitter<Hero>();
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  displayDetails(): void {
-    this.details = this.details + this.hero.name;
+  delete() {
+    return this.deleteRequest.emit(this.hero);
+  }
+
+  displayDetails(): string {
+    return this.details + this.hero.name;
   }
 }

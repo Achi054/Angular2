@@ -76,5 +76,17 @@ Binding can be grouped as <b>source to view, view to source and two-way</b>
 <td>[(target)]="expression" or bindon-target="expression"</td>
 </tr>
 </table>
+
 - Passing data to child from parent<br/>
-<b>@Input property-name</b>
+<b>@Input property-name</b><br/>
+
+- Class attribute<br/>
+<b>\<p [class.col-green]="isGreen"\></b>
+
+- Emit event from child to parent<br/>
+create event emiter <b>@Output() deleteRequest = new EventEmmiter<Hero>();</b>
+<br/>
+On delete click, emit hero object <br/>
+<b>delete() { this.deleteRequest.emit(this.hero); }</b><br/>
+In component element of parent handle deleteRequest<br/>
+<b>\<app-hero-component (deleteRequest)="deleteHero($event)" /></b><br/>

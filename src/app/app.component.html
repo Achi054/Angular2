@@ -5,8 +5,7 @@
   Heroes:
   <ul>
     <li *ngFor="let hero of heroes">{{hero.name}}
-      <app-hero-details [hero]="hero"></app-hero-details>
-      <button (click)="deleteHero(hero)">x</button>
+      <app-hero-details [hero]="hero" (deleteRequest)="deleteHero($event)"></app-hero-details>
     </li>
   </ul>
 </div>
