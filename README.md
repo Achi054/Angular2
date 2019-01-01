@@ -87,6 +87,38 @@ Binding can be grouped as `source to view, view to source and two-way`
 create event emiter `@Output() deleteRequest = new EventEmmiter<Hero>();`
 <br/>
 On delete click, emit hero object <br/>
-`delete() { this.deleteRequest.emit(this.hero); }`<br/>
+`delete() { this.deleteRequest.emit(this.hero); }`
+<br/>
 In component element of parent handle deleteRequest<br/>
 `<app-hero-component (deleteRequest)="deleteHero($event)" />`<br/>
+- [Built-in attribute directive](https://angular.io/guide/template-syntax#built-in-attribute-directives)<br/>
+[NgClass](https://angular.io/guide/template-syntax#ngclass)<br/>
+For single css class setter, `<div [class.special]="isSpecial">The class binding is special</div>`<br/>
+For multi-class setter, `<div [ngClass]="currentClasses">This div is initially saveable, unchanged, and special</div>` where `currentClass` is a object property containing all the class names and boolean value.<br/>
+<br/>
+[NgStyle](https://angular.io/guide/template-syntax#ngstyle)<br/>
+For single style setter, `<div [style.font-size]="isSpecial ? 'x-large' : 'smaller'" >This div is x-large or smaller.</div>`<br/>
+For multi-style setter, `<div [ngStyle]="currentStyles">This div is initially italic, normal weight, and extra large (24px)</div>` where `currentStyle` is a object property containing all the style names and respective values.<br/>
+<br/>
+[NgModel](https://angular.io/guide/template-syntax#ngmodel---two-way-binding-to-form-elements-with-ngmodel)<br/>
+`<input [(ngModel)]="currentHero.name">`
+<br/>
+- [Built-in structural directives](https://angular.io/guide/template-syntax#built-in-structural-directives)<br/>
+[NgIf](https://angular.io/guide/template-syntax#ngif)
+`<app-hero-detail *ngIf="isActive"></app-hero-detail>`<br/><br/>
+[NgForOf](https://angular.io/guide/template-syntax#ngforof) `<div *ngFor="let hero of heroes">{{hero.name}}</div>`<br/>
+The string assigned to *ngFor is not a template expression. It's a microsyntax — a little language of its own that Angular interprets. The string "let hero of heroes" means:
+Take each hero in the heroes array, store it in the local hero looping variable, and make it available to the templated HTML for each iteration.<br/>
+- [Template input variable](https://angular.io/guide/template-syntax#template-input-variables)<br/>
+[NgFor with index](https://angular.io/guide/template-syntax#template-input-variables), `<div *ngFor="let hero of heroes; let i=index">{{i + 1}} - {{hero.name}}</div>
+`<br/><br/>
+[NgFor with trackby](https://angular.io/guide/template-syntax#ngfor-with-trackby), `<div *ngFor="let hero of heroes; trackBy: trackByHeroes">({{hero.id}}) {{hero.name}}</div>` where `trackByHeroes` is used as function in component<br/>
+`trackByHeroes(index: number, hero: Hero): number { return hero.id; }`<br/><br/>
+[NgSwitch](https://angular.io/guide/template-syntax#the-ngswitch-directives), `<div [ngSwitch]="currentHero.emotion">`<br/>
+  `<app-happy-hero    *ngSwitchCase="'happy'"    [hero]="currentHero"></app-happy-hero>`<br/>
+  `<app-sad-hero      *ngSwitchCase="'sad'"      [hero]="currentHero"></app-sad-hero>`<br/>
+  `<app-confused-hero *ngSwitchCase="'confused'" [hero]="currentHero"></app-confused-hero>`<br/>
+  `<app-unknown-hero  *ngSwitchDefault           [hero]="currentHero"></app-unknown-hero>`<br/>
+  `</div>`
+
+

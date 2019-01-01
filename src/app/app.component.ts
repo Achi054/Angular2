@@ -11,6 +11,7 @@ export class AppComponent {
   myHero: Hero;
   heroes: Hero[];
   angularImagePath: string;
+  fontSizePx: number;
 
   constructor() {
     this.title = 'Tour of Heroes';
@@ -23,6 +24,7 @@ export class AppComponent {
     this.myHero = this.heroes[0];
     // tslint:disable-next-line:max-line-length
     this.angularImagePath = 'https://vignette.wikia.nocookie.net/marvel_dc/images/2/2e/DC_Comics_The_Ultimate_Guide.jpg/revision/latest?cb=20170310040116';
+    this.fontSizePx = 15;
   }
 
   deleteHero(hero: Hero): void {
