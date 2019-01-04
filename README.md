@@ -104,21 +104,28 @@ For multi-style setter, `<div [ngStyle]="currentStyles">This div is initially it
 `<input [(ngModel)]="currentHero.name">`
 <br/>
 - [Built-in structural directives](https://angular.io/guide/template-syntax#built-in-structural-directives)<br/>
-[NgIf](https://angular.io/guide/template-syntax#ngif)
+[NgIf](https://angular.io/guide/template-syntax#ngif)<br/>
 `<app-hero-detail *ngIf="isActive"></app-hero-detail>`<br/><br/>
-[NgForOf](https://angular.io/guide/template-syntax#ngforof) `<div *ngFor="let hero of heroes">{{hero.name}}</div>`<br/>
+[NgForOf](https://angular.io/guide/template-syntax#ngforof) <br/>`<div *ngFor="let hero of heroes">{{hero.name}}</div>`<br/>
 The string assigned to *ngFor is not a template expression. It's a microsyntax — a little language of its own that Angular interprets. The string "let hero of heroes" means:
 Take each hero in the heroes array, store it in the local hero looping variable, and make it available to the templated HTML for each iteration.<br/>
 - [Template input variable](https://angular.io/guide/template-syntax#template-input-variables)<br/>
-[NgFor with index](https://angular.io/guide/template-syntax#template-input-variables), `<div *ngFor="let hero of heroes; let i=index">{{i + 1}} - {{hero.name}}</div>
+[NgFor with index](https://angular.io/guide/template-syntax#template-input-variables), <br/>`<div *ngFor="let hero of heroes; let i=index">{{i + 1}} - {{hero.name}}</div>
 `<br/><br/>
-[NgFor with trackby](https://angular.io/guide/template-syntax#ngfor-with-trackby), `<div *ngFor="let hero of heroes; trackBy: trackByHeroes">({{hero.id}}) {{hero.name}}</div>` where `trackByHeroes` is used as function in component<br/>
+[NgFor with trackby](https://angular.io/guide/template-syntax#ngfor-with-trackby), <br/>`<div *ngFor="let hero of heroes; trackBy: trackByHeroes">({{hero.id}}) {{hero.name}}</div>` where `trackByHeroes` is used as function in component<br/>
 `trackByHeroes(index: number, hero: Hero): number { return hero.id; }`<br/><br/>
-[NgSwitch](https://angular.io/guide/template-syntax#the-ngswitch-directives), `<div [ngSwitch]="currentHero.emotion">`<br/>
+[NgSwitch](https://angular.io/guide/template-syntax#the-ngswitch-directives), <br/>`<div [ngSwitch]="currentHero.emotion">`<br/>
   `<app-happy-hero    *ngSwitchCase="'happy'"    [hero]="currentHero"></app-happy-hero>`<br/>
   `<app-sad-hero      *ngSwitchCase="'sad'"      [hero]="currentHero"></app-sad-hero>`<br/>
   `<app-confused-hero *ngSwitchCase="'confused'" [hero]="currentHero"></app-confused-hero>`<br/>
   `<app-unknown-hero  *ngSwitchDefault           [hero]="currentHero"></app-unknown-hero>`<br/>
   `</div>`
+  <br/>
+- [Template reference variables](https://angular.io/guide/template-syntax#template-reference-variables--var-)<br/>
+A template reference variable is often a reference to a DOM element within a template.<br/>
+`<input #phone placeholder="phone number">`<br/>`<button (click)="callPhone(phone.value)">Call</button>`<br/>
+- [Input and Output properties](https://angular.io/guide/template-syntax#input-and-output-properties)<br/>
+- [Template expression operators](https://angular.io/guide/template-syntax#template-expression-operators)<br/>
+
 
 
