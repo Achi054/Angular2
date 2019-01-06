@@ -86,6 +86,7 @@ Binding can be grouped as `source to view, view to source and two-way`
 - Emit event from child to parent<br/>
 create event emiter `@Output() deleteRequest = new EventEmmiter<Hero>();`
 <br/>
+
 On delete click, emit hero object 
 ```
 delete() { 
