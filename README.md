@@ -96,3 +96,15 @@ delete() {
 
 
 
+
+- [Template expression operator](https://angular.io/guide/template-syntax#template-expression-operators)<br/>
+  - [Pipe operator ( | )](https://angular.io/guide/template-syntax#the-pipe-operator---)
+  - [Safe navigation operator and null property paths](https://angular.io/guide/template-syntax#the-safe-navigation-operator----and-null-property-paths)
+  - [Non-null assertion operator ( ! )](https://angular.io/guide/template-syntax#the-safe-navigation-operator----and-null-property-paths)
+
+## User Input
+- 
+
+
+
+
