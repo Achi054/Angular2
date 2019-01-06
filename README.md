@@ -87,7 +87,11 @@ Binding can be grouped as `source to view, view to source and two-way`
 create event emiter `@Output() deleteRequest = new EventEmmiter<Hero>();`
 <br/>
 On delete click, emit hero object 
-`delete() { this.deleteRequest.emit(this.hero); }`
+```
+delete() { 
+  this.deleteRequest.emit(this.hero); 
+}
+```
 
 
 
