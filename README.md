@@ -134,22 +134,22 @@ Take each hero in the heroes array, store it in the local hero looping variable,
 
   - [NgSwitch](https://angular.io/guide/template-syntax#the-ngswitch-directives), <br/>
 
-```
-<div [ngSwitch]="currentHero.emotion">
-  <app-happy-hero    *ngSwitchCase="'happy'"    [hero]="currentHero"></app-happy-hero>
-  <app-sad-hero      *ngSwitchCase="'sad'"      [hero]="currentHero"></app-sad-hero>
-  <app-confused-hero *ngSwitchCase="'confused'" [hero]="currentHero"></app-confused-hero>
-  <app-unknown-hero  *ngSwitchDefault           [hero]="currentHero"></app-unknown-hero>
-</div>
-```
+    ```
+    <div [ngSwitch]="currentHero.emotion">
+      <app-happy-hero    *ngSwitchCase="'happy'"    [hero]="currentHero"></app-happy-hero>
+      <app-sad-hero      *ngSwitchCase="'sad'"      [hero]="currentHero"></app-sad-hero>
+      <app-confused-hero *ngSwitchCase="'confused'" [hero]="currentHero"></app-confused-hero>
+      <app-unknown-hero  *ngSwitchDefault           [hero]="currentHero"></app-unknown-hero>
+    </div>
+    ```
 
 - [Template reference variables](https://angular.io/guide/template-syntax#template-reference-variables--var-)<br/>
 A template reference variable is often a reference to a DOM element within a template.<br/>
-`<input #phone placeholder="phone number">`
-<br/>
-`<button (click)="callPhone(phone.value)">Call</button>`
-<br/>
+`<input #phone placeholder="phone number">`<br/>
+`<button (click)="callPhone(phone.value)">Call</button>`<br/>
+
 - [Input and Output properties](https://angular.io/guide/template-syntax#input-and-output-properties)<br/>
+
 - [Template expression operators](https://angular.io/guide/template-syntax#template-expression-operators)<br/>
 
 - [Template expression operator](https://angular.io/guide/template-syntax#template-expression-operators)<br/>
