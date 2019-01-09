@@ -215,7 +215,10 @@ The local variable approach is simple and easy. But it is limited because the pa
   You can't use the local variable technique if an instance of the parent component class must read or write child component values or must call child component methods.
   When the parent component class requires that kind of access, inject the child component into the parent as a ViewChild.
 
-- 
+- [Parent and children communicate via a service](https://angular.io/guide/component-interaction#parent-and-children-communicate-via-a-service)
+  A parent component and its children share a service whose interface enables bi-directional communication within the family.
+
+  The scope of the service instance is the parent component and its children. Components outside this component subtree have no access to the service or their communications.
 
 
 
