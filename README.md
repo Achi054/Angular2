@@ -158,7 +158,66 @@ A template reference variable is often a reference to a DOM element within a tem
   - [Non-null assertion operator ( ! )](https://angular.io/guide/template-syntax#the-safe-navigation-operator----and-null-property-paths)
 
 ## User Input
+- Binding to user input events<br/>
+`<button (click)="onClickMe()">Click me!</button>`
+
+- [Get user input from the $event object](https://angular.io/guide/user-input#get-user-input-from-the-event-object)
+`<input (keyup)="onKey($event)"><p>{{values}}</p>`
+this is not a good practice.
+
+- [Get user input from a template reference variable](https://angular.io/guide/user-input#get-user-input-from-a-template-reference-variable)
+`<input #box (keyup)="0"><p>{{box.value}}</p>`
+note the keyup event needs to be bound to some variable to #box to reference the input.
+
+## Lifecycle Hooks
+- [Lifecycle sequence](https://angular.io/guide/lifecycle-hooks#lifecycle-sequence)
+  - ngOnChanges()
+  - ngOnInit()
+  - ngDoCheck()
+  - ngAfterContentInit()
+  - ngAfterContentChecked()
+  - ngAfterViewInit()
+  - ngAfterViewChecked()
+  - ngOnDestroy()
+
+## Component Interaction
+- [Pass data from parent to child with input binding](https://angular.io/guide/component-interaction#pass-data-from-parent-to-child-with-input-binding)<br/>
+using @Input decorations
+- [Intercept input property changes with a setter
+](https://angular.io/guide/component-interaction#intercept-input-property-changes-with-a-setter)<br/>
+  ```
+  import { Component, Input } from '@angular/core';
+  
+  @Component({
+    selector: 'app-name-child',
+    template: '<h3>"{{name}}"</h3>'
+  })
+  export class NameChildComponent {
+    private _name = '';
+  
+    @Input()
+    set name(name: string) {
+      this._name = (name && name.trim()) || '<no name set>';
+    }
+  
+    get name(): string { return this._name; }
+  }
+  ```
+- [Parent listens for child event](https://angular.io/guide/component-interaction#parent-listens-for-child-event)<br/>
+A parent component cannot use data binding to read child properties or invoke child methods. You can do both by creating a template reference variable for the child element and then reference that variable within the parent template 
+
+- [Parent interacts with child via local variable](https://angular.io/guide/component-interaction#parent-interacts-with-child-via-local-variable)<br/>
+A parent component cannot use data binding to read child properties or invoke child methods. You can do both by creating a template reference variable for the child element and then reference that variable within the parent template 
+
+- [Parent calls an @ViewChild()](https://angular.io/guide/component-interaction#parent-calls-an-viewchild)<br/>
+The local variable approach is simple and easy. But it is limited because the parent-child wiring must be done entirely within the parent template. The parent component itself has no access to the child.
+
+  You can't use the local variable technique if an instance of the parent component class must read or write child component values or must call child component methods.
+  When the parent component class requires that kind of access, inject the child component into the parent as a ViewChild.
+
 - 
+
+
 
 
 

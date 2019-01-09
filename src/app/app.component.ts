@@ -12,6 +12,7 @@ export class AppComponent {
   heroes: Hero[];
   angularImagePath: string;
   fontSizePx: number;
+  index: 5;
 
   constructor() {
     this.title = 'Tour of Heroes';
@@ -29,5 +30,10 @@ export class AppComponent {
 
   deleteHero(hero: Hero): void {
     this.heroes.splice(this.heroes.findIndex(x => x.id === hero.id), 1);
+  }
+
+  addHero(heroName: string): void {
+    this.heroes.push(new Hero(this.index, heroName));
+    this.index++;
   }
 }
