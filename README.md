@@ -224,10 +224,11 @@ The local variable approach is simple and easy. But it is limited because the pa
 - [Using component styles](https://angular.io/guide/component-styles#using-component-styles)
 
 - [Special selectors](https://angular.io/guide/component-styles#special-selectors)
-  - `:host`, 
-  Use the :host pseudo-class selector to target styles in the element that hosts the component
+  - `:host`
+  , Use the :host pseudo-class selector to target styles in the element that hosts the component
 
-  - `:host-context`, apply styles based on some condition outside of a component's view. For example, a CSS theme class could be applied to the document <body> element, and you want to change how your component looks based on that.
+  - `:host-context`
+  , apply styles based on some condition outside of a component's view. For example, a CSS theme class could be applied to the document <body> element, and you want to change how your component looks based on that.
     ```
     :host-context(.theme-light) h2 {
       background-color: #eef;
