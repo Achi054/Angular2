@@ -239,7 +239,9 @@ The local variable approach is simple and easy. But it is limited because the pa
   - Style files in component metadata
   - Template inline styles
   - Template link tags
-  - CSS @imports, `@import './hero-details-box.css';` in any *.css file
+  - CSS @imports, 
+  `@import './hero-details-box.css';` 
+  in any *.css file
 
 
 
