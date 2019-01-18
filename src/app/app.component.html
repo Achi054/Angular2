@@ -13,4 +13,11 @@
     </li>
   </ul>
 </div>
-<p *ngIf="heroes.length > 3" [ngClass]="{ 'color-red' : true }"> There are many heroes !!</p>
+<h1>Pick your color</h1>
+<div>
+  <input type="radio" name="color" (click)="color='yellow'">Yellow
+  <input type="radio" name="color" (click)="color='cyan'">Cyan
+  <input type="radio" name="color" (click)="color='green'">Green
+  <input type="radio" name="color" (click)="color='blue'">Blue
+</div>
+<p *ngIf="heroes.length > 3" [ngClass]="{ 'color-red' : true }" [appHighlight] ="color"> There are many heroes !!</p>

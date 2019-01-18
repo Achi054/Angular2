@@ -243,9 +243,24 @@ The local variable approach is simple and easy. But it is limited because the pa
   `@import './hero-details-box.css';` 
   in any *.css file
 
+## Attribute Directives
+An Attribute directive changes the appearance or behavior of a DOM element.<br/>
 
+- Directives overview<br/>
+Three kinds of directives in Angular:
+  - Components - directives with a template.
+  - Structural directives - change the DOM layout by adding and removing DOM elements.
+  - Attribute directives - change the appearance or behavior of an element, component, or another directive.
 
+## Structural Directives
+Structural directives are responsible for HTML layout. They shape or reshape the DOM's structure, typically by adding, removing, or manipulating elements.
 
+As with other directives, you apply a structural directive to a host element. The directive then does whatever it's supposed to do with that host element and its descendants.
+
+Structural directives are easy to recognize. An asterisk (*) precedes the directive attribute name as in this example.<br/>
+`<div *ngIf="hero" class="name">{{hero.name}}</div>`
+<br/>
+ common used Structural directives NgIf, NgFor and NgSwitch.
 
 
 

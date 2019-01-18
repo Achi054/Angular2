@@ -13,6 +13,7 @@ export class AppComponent {
   angularImagePath: string;
   fontSizePx: number;
   index: 5;
+  color: string;
 
   constructor() {
     this.title = 'Tour of Heroes';
