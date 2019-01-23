@@ -262,5 +262,57 @@ Structural directives are easy to recognize. An asterisk (*) precedes the direct
 <br/>
  common used Structural directives NgIf, NgFor and NgSwitch.
 
+- [NgIf](https://angular.io/guide/structural-directives#ngif-case-study)<br/>
+  ```
+  <p *ngIf="true">
+    Expression is true and ngIf is true.
+    This paragraph is in the DOM.
+  </p>
+  <p *ngIf="false">
+    Expression is false and ngIf is false.
+    This paragraph is not in the DOM.
+  </p>
+  ```
+- [NgFor](https://angular.io/guide/structural-directives#inside-ngfor)<br/>
+  ```
+  <div *ngFor="let hero of heroes; let i=index; let odd=odd; trackBy: trackById" [class.odd]="odd">
+  ({{i}}) {{hero.name}}
+  </div>
+  ```
+- [NgSwitch](https://angular.io/guide/structural-directives#inside-ngswitch-directives)<br/>
+  ```
+  <div [ngSwitch]="hero?.emotion">
+  <app-happy-hero    *ngSwitchCase="'happy'"    [hero]="hero"></app-happy-hero>
+  <app-sad-hero      *ngSwitchCase="'sad'"      [hero]="hero"></app-sad-hero>
+  <app-confused-hero *ngSwitchCase="'app-confused'" [hero]="hero"></app-confused-hero>
+  <app-unknown-hero  *ngSwitchDefault           [hero]="hero"></app-unknown-hero>
+  </div>
+  ```
 
+## Pipes
+A pipe takes in data as input and transforms it to a desired output.<br/>
+`<p>The hero's birthday is {{ birthday | date }}</p>`<br/>
+`<p>The hero's birthday is {{ birthday | date:"MM/dd/yy" }} </p>`<br/>
+- [Custom pipes](https://angular.io/guide/pipes#custom-pipes)
+  ```
+  import { Pipe, PipeTransform } from '@angular/core';
+  /*
+  * Raise the value exponentially
+  * Takes an exponent argument that defaults to 1.
+  * Usage:
+  *   value | exponentialStrength:exponent
+  * Example:
+  *   {{ 2 | exponentialStrength:10 }}
+  *   formats to: 1024
+  */
+  @Pipe({name: 'exponentialStrength'})
+  export class ExponentialStrengthPipe implements PipeTransform {
+    transform(value: number, exponent: string): number {
+      let exp = parseFloat(exponent);
+      return Math.pow(value, isNaN(exp) ? 1 : exp);
+    }
+  }
+
+  <p>Super power boost: {{2 | exponentialStrength: 10}}</p>
+  ```
 

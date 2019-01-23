@@ -21,3 +21,8 @@
   <input type="radio" name="color" (click)="color='blue'">Blue
 </div>
 <p *ngIf="heroes.length > 3" [ngClass]="{ 'color-red' : true }" [appHighlight] ="color"> There are many heroes !!</p>
+<div>
+  <label for="power">Power</label><input [(ngModel)]="power">
+  <label for="boost">Boost</label><input type="text" [(ngModel)]="boost">
+  <label>Power boost of {{ power | exponentialStrength: boost }}</label>
+</div>

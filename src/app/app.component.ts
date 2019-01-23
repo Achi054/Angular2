@@ -14,6 +14,8 @@ export class AppComponent {
   fontSizePx: number;
   index: 5;
   color: string;
+  power: number;
+  boost: number;
 
   constructor() {
     this.title = 'Tour of Heroes';
@@ -27,6 +29,8 @@ export class AppComponent {
     // tslint:disable-next-line:max-line-length
     this.angularImagePath = 'https://vignette.wikia.nocookie.net/marvel_dc/images/2/2e/DC_Comics_The_Ultimate_Guide.jpg/revision/latest?cb=20170310040116';
     this.fontSizePx = 15;
+    this.power = 2;
+    this.boost = 0;
   }
 
   deleteHero(hero: Hero): void {
