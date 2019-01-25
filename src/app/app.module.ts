@@ -7,6 +7,7 @@ import { HeroDetailsComponent } from './hero-details/hero-details.component';
 import { SizeComponent } from './size/size.component';
 import { HighlightDirective } from './highlight.directive';
 import { ExponentialStrengthPipe } from './exponential-strength.pipe';
+import { HeroFormComponent } from './hero-form/hero-form.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ExponentialStrengthPipe } from './exponential-strength.pipe';
     HeroDetailsComponent,
     SizeComponent,
     HighlightDirective,
-    ExponentialStrengthPipe
+    ExponentialStrengthPipe,
+    HeroFormComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +25,5 @@ import { ExponentialStrengthPipe } from './exponential-strength.pipe';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
 
-}
+export class AppModule {}
