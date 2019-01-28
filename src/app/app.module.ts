@@ -8,6 +8,7 @@ import { SizeComponent } from './size/size.component';
 import { HighlightDirective } from './highlight.directive';
 import { ExponentialStrengthPipe } from './exponential-strength.pipe';
 import { HeroFormComponent } from './hero-form/hero-form.component';
+import { ForbiddenValidatorDirective } from './shared/forbidden-validator.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HeroFormComponent } from './hero-form/hero-form.component';
     SizeComponent,
     HighlightDirective,
     ExponentialStrengthPipe,
-    HeroFormComponent
+    HeroFormComponent,
+    ForbiddenValidatorDirective
   ],
   imports: [
     BrowserModule,
